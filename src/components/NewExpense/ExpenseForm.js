@@ -3,7 +3,9 @@ import './ExpenseForm.css';
 
 const ExpenseForm = () => {
 
-    const titleChangeHandler
+    const titleChangeHandler = (e) => {
+        console.log(e.target.value);
+    }
 
     return (
 
@@ -11,7 +13,7 @@ const ExpenseForm = () => {
             <div className="new-expense__controls">
                 <div className="new-expense__control">
                     <label>Title</label>
-                    <input type='text' onChange={} />
+                    <input type='text' onChange={titleChangeHandler} />
                 </div>
                 <div className="new-expense__control">
                     <label>Amount</label>
@@ -22,7 +24,7 @@ const ExpenseForm = () => {
                     <input type='date' min='2022-11-17' max='2024-01-01' />
                 </div>
             </div>
-            <div className="new-expense__actions"> 
+            <div className="new-expense__actions">
                 <button type="submit"> Add expense</button>
             </div>
         </form>
